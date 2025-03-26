@@ -6,8 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello world</h1>
-
+    <h1>hello Students</h1> 
     <form action="/addData" method="post">
 
     <input type="text" placeholder="enter your name" name="name">
@@ -16,13 +15,36 @@
 
     <button type="submit">submit</button>
     </form>
-    <button onclick="handleclick()">click </button>
+
+    <br>
+
+    <table border="1" width="40%" >
+
+        <thead >
+        <tr>
+            <th colspan="20">Student Information</th>
+        </tr>
+
+            <% students.map((e,i)=>{ %>
+
+                <tr>
+
+                    <td><%=e.id%></td>
+                    <td><%=e.name%></td>
+                    <td><%=e.subject%></td>
+                    <td><%=e.city%></td>
+
+                    <td><a href="/editData/<%=e.id%>"><button>Edit</button></a></td>
+
+                    <td><a href="/deleteData?id=<%=e.id%>"><button>Delete</button></a></td>
+
+                </tr>
+                
+           <%  })%>
+           
+
+        </thead>
+    </table>
     
 </body>
 </html>
-<script>
-
-const handleclick=()=>{
-    alert("btn is the click")
-}
-</script>
