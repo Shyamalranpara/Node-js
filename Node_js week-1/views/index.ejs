@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     body {
+        margin: 0 auto;
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    }
+    form{
+        width: 50%;
+        height: 5vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    input{
+        background-color: #bbe4e9;
+        border: none;
+    }
+    h1{
+        text-align: center;
+    }
+    table{
+        margin: 0 auto;
+    }
+    button{
+        background-color: #75e1ed;
+        border: none;
+    }
+   
+</style>
 <body>
-    <h1>hello Students</h1> 
+    <div class="main">
+    <h1 style="font-size: 3em;">Students Form</h1> 
     <form action="/addData" method="post">
 
     <input type="text" placeholder="enter your name" name="name">
@@ -18,11 +55,11 @@
 
     <br>
 
-    <table border="1" width="40%" >
+    <table border="1" width="80%">
 
         <thead >
         <tr>
-            <th colspan="20">Student Information</th>
+            <th colspan="20"><h2>Student Information</h2></th>
         </tr>
 
             <% students.map((e,i)=>{ %>
@@ -45,6 +82,7 @@
 
         </thead>
     </table>
+</div>
     
 </body>
 </html>

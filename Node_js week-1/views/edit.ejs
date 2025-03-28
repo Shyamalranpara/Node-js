@@ -7,13 +7,21 @@
 </head>
 <body>
     <h1>CRUD IN EXPRESS</h1>
-    
-    <form action="/updateData" method="post">
-    <input type="text" placeholder="enter your name" name="name">
-    <input type="text" placeholder="enter your subject" name="subject">
-    <input type="text" placeholder="enter your city" name="city">
 
-    <button type="submit">submit</button>
+   
+    <form action="/updateData" method="post">
+
+        <input type="hidden" name="id" hidden value="<%= singleData.id %>">
+
+        <input type="text" placeholder="enter your name"  name="name" value="<%= singleData.name %>" >
+
+        <input type="text" placeholder="enter your subject" name="subject" value="<%= singleData.subject %>">
+
+        <input type="text" placeholder="enter your city" name="city" value="<%= singleData.city %>">
+
+        <button type="submit">Update</button>
+
     </form>
+
 </body>
 </html>

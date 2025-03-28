@@ -13,7 +13,6 @@ app.use(express.urlencoded())
 
 app.get("/",(req,res)=>{
     console.log(students);
-    
     res.render("index",{students})
 });
 
@@ -28,7 +27,7 @@ app.post("/addData",(req,res)=>{
 /*  Access the parsed URL-encoded data from req.body */
  
 
-
+/*delete data*/
 app.get("/deleteData",(req,res)=>{
 console.log(req.body) 
 let data = students.filter((item)=>item.id != Number(req.query.id))
@@ -36,7 +35,7 @@ students=data;
 res.redirect("/")
 })
 
-/* edit data */
+/* edit data*/
 app.get("/editData/:id",(req,res)=>{
 let singleData = students.find((item)=>item.id == req.params.id);
 res.render("edit",{singleData})
@@ -53,8 +52,9 @@ app.post("/updateData",(req,res)=>{
             item
         }
     })
+    res.redirect("/")
 })
 
 app.listen(port,(err)=>{
     err ? console.log(err) : console.log(`server started ${port}`)
-}) 
+})
