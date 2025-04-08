@@ -10,15 +10,15 @@
     <section class="s1">
         <div class="mdiv"><h1>Book Store</h1>
 
-        <!-- Form to add a new book -->
         <form action="/addData" method="post">
             <input type="text" placeholder="Enter Book Title" name="title">
             <input type="text" placeholder="Enter Book Author" name="author">
             <input type="text" placeholder="Enter Book Publish Year" name="year">
             <button class="btn" type="submit">Submit</button>
         </form></div>
+        
         <br>
-        <!-- List all books -->
+
         <div class="child">
             <% books.forEach((book) => { %>
                 <div class="gchild">

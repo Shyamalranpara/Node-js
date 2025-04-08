@@ -1,5 +1,9 @@
 body{
-    background-color: #e7eaf6; 
+    background-image: url('/assets/5153829.jpg');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #1e3a8a; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
