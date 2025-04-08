@@ -1,0 +1,70 @@
+body{
+    background-color: #e7eaf6; 
+    color: #1e3a8a; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.mdiv{
+    margin: 0 auto;
+    width: 60%;
+    height: 30vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+h1{
+    font-size: 40px ; 
+}
+input{
+    padding: 15px 25px 15px 25px ;
+    background-color: #eaf6f6;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.child{
+    /* border:  1px solid; */
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+.gchild{
+    padding: 1.5em;
+    background-color: #a2a8d3; 
+    border-radius: 20px;
+
+}
+.title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbe4e998;
+}
+.btn{
+    background-color: #1e3a8a; 
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover{
+    background-color: #1565c0; 
+    transform: scale(1.05);
+}

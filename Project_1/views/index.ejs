@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    <section class="s1">
+        <div class="mdiv"><h1>Book Store</h1>
+
+        <!-- Form to add a new book -->
+        <form action="/addData" method="post">
+            <input type="text" placeholder="Enter Book Title" name="title">
+            <input type="text" placeholder="Enter Book Author" name="author">
+            <input type="text" placeholder="Enter Book Publish Year" name="year">
+            <button class="btn" type="submit">Submit</button>
+        </form></div>
+        <br>
+        <!-- List all books -->
+        <div class="child">
+            <% books.forEach((book) => { %>
+                <div class="gchild">
+                    <h2 class="title">Book Title: <%= book.title %></h2>
+                    <p>Book Author: <%= book.author %></p>
+                    <p>Book Published Year: <%= book.year %></p>
+                    <a href="/editData/<%= book._id %>"><button class="btn">Edit</button></a>
+                    <a href="/deleteData?id=<%= book._id %>"><button class="btn">Delete</button></a>
+                </div>
+            <% }) %>
+        </div>
+
+    </section>
+</body>
+</html>
