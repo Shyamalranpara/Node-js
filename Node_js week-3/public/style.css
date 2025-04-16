@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413'); /* Replace with your preferred background */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+form {
+    width: 40%;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+input[type="text"],
+input[type="file"] {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+img {
+    border-radius: 8px;
+}
+
+a button {
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 5px 0;
+    background-color: #198754;
+}
+
+a button:hover {
+    background-color: #157347;
+}
+
+a:last-child button {
+    background-color: #dc3545;
+}
+
+a:last-child button:hover {
+    background-color: #bb2d3b;
+}

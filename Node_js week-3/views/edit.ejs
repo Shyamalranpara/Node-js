@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data</title>
+</head>
+<body>
+    <h2>Edit Data</h2>
+
+    <form action="/updateData/<%= data._id %>" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="id" value="<%= data._id %>">
+    
+        <input type="text" name="name" value="<%= data.name %>" placeholder="Enter name" required>
+        <input type="text" name="subject" value="<%= data.subject %>" placeholder="Enter subject" required>
+        <input type="file" name="image">
+        
+        <img src="/<%= data.image %>" width="20%" alt="">
+    
+        <button type="submit">Update</button>
+    </form>
+    
+    <br>
+    <a href="/">Go back</a>
+</body>
+</html>
