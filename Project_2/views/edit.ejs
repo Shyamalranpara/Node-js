@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data</title>
+</head>
+<body>
+    <h2>Edit Data</h2>
+
+    <form action="/editAdminData/<%=data._id %>" method="post">
+        <input type="hidden" name="id" value="<%=data._id %>">
+        
+        <input type="text" name="firstname" value="<%= data.firstname %>" placeholder="Enter firstname" required>
+        <input type="text" name="lastname" value="<%= data.lastname %>" placeholder="Enter lastname" required>
+        <input type="email" name="email" value="<%= data.email %>" placeholder="Enter email" required>
+        <input type="password" name="password" value="<%= data.password %>" placeholder="Enter password" required>
+        
+        <button type="submit">Update</button>
+    </form>
+    
+    <br>
+    <a href="/viewAdmin">Go back</a>
+</body>
+</html>
