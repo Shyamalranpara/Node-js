@@ -37,7 +37,7 @@
                 <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
+                          <th scope="col">Id</th>
                           <th scope="col">FirstName</th>
                           <th scope="col">LastName</th>
                           <th scope="col">Email</th>
@@ -56,8 +56,8 @@
                             <td><%= el.email %></td>
                             <td><%= el.password %></td>
                            
-                            <td><a href="/editAdminData/<%=el.id%>"><button class="btn btn-danger">Edit</button></a></td>
-                            <td><a href="/deleteAdmin?id=<%=el.id%>"><button class="btn btn-primary">Delete</button></a></td>
+                            <td><a href="/editAdminData/<%=el.id%>"><button class="btn btn-primary">Edit</button></a></td>
+                            <td><a href="/deleteAdmin?id=<%=el.id%>"><button class="btn btn-success">Delete</button></a></td>
                           </tr>
                        <%})}%>
                       </tbody>

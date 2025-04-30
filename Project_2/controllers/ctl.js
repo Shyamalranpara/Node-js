@@ -6,20 +6,20 @@ module.exports.firstPage = async (req, res) => {
 };
 
 module.exports.seoDash = (req, res) => {
-    if(req.cookies.Addmin){
+    // if(req.cookies.Addmin){
         res.render("seoDash");
-    }else{
-        res.redirect("/")
-    }
+    // }else{
+        // res.redirect("/")
+    // }
 };
 
 module.exports.addAdmin = async (req,res)=>{
-    if(req.cookies.Addmin){
+    // if(req.cookies.Addmin){
 
         res.render("addAdmin")
-    }else{
-        res.redirect("/")
-    }
+    // }else{
+        // res.redirect("/")
+    // }
 };
 
 module.exports.addAdminData = async (req,res)=>{
@@ -29,7 +29,7 @@ module.exports.addAdminData = async (req,res)=>{
 }
 
 module.exports.viewAdmin = async (req, res) => {
-    if(req.cookies.Addmin){
+    // if(req.cookies.Addmin){
 
         try {
              const data = await Addmin.find({}); 
@@ -40,9 +40,9 @@ module.exports.viewAdmin = async (req, res) => {
             res.status(500).send("Internal Server Error");
         }
 
-    }else{
-        res.redirect("/")
-    }
+    // }else{
+        // res.redirect("/")
+    // }
 };
 
 module.exports.deleteAdmin = async (req,res)=>{
@@ -72,13 +72,16 @@ res.render("login")
 };
 
 module.exports.loginData = async (req, res) => {
-    let admin = await Addmin.findOne({ email: req.body.email });
-    if (!admin) {
-        return res.redirect("/"); 
-    }
-    if (req.body.password == admin.password) {
-        res.cookie("Addmin", Addmin);
-        return res.redirect("/seoDash"); 
-    }
-    return res.redirect("/"); 
+    // let admin = await Addmin.findOne({ email: req.body.email });
+    // if (!admin) {
+    //     return res.redirect("/");
+    // }
+    
+    // if (req.body.password == admin.password) {
+    //     res.cookie("Addmin", admin._id.toString());
+         res.redirect("/seoDash");
+    // }
+    
+    // return res.redirect("/");
+    
 };
