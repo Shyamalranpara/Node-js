@@ -1,6 +1,8 @@
 const express = require("express")
 const port = 1011;
-const path = require("path")
+const path = require("path") 
+const db = require("./config/db")
+const firstSchema = require("./model/firstSchema");
 
 const app = express();
 
@@ -10,7 +12,8 @@ let students = [{
 
 app.set("view engine","ejs")
 app.use(express.urlencoded())
-app.use(express.static(path.join(__dirname,"public")))
+// app.use(express.static(path.join(__dirname,"public")))
+// app.use(express.static(path.join(__filename,"public"))) 
 /* Use the express.urlencoded() middleware to parse URL-encoded data */
 
 app.get("/",(req,res)=>{
@@ -19,12 +22,17 @@ app.get("/",(req,res)=>{
 });
 
 
-app.post("/addData",(req,res)=>{
-    console.log(req.body);
-    req.body.id = students.length+1;
+app.post("/addData",async(req,res)=>{
+    // console.log(req.body);
+    // req.body.id = students.length+1;
     // students.push(req.body);
-    students=[...students,req.body] /* using spred oprator */
-    res.redirect("/") /*server sends a redirect response, the browser will automatically make a new request to the URL provided by the redirect. */
+    // students=[...students,req.body] /* using spred oprator */
+    // res.redirect("/") /*server sends a redirect response, the browser will automatically make a new request to the URL provided by the redirect. */
+
+    await firstSchema.create(req.body)
+    .then(()=>{
+        res.redirect("/")
+    })
 })
 /*  Access the parsed URL-encoded data from req.body */
  

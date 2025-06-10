@@ -1,5 +1,6 @@
 const express = require("express")
 const port = 1010;
+const path = require("path")
 
 const app = express();
 
@@ -9,6 +10,7 @@ let students = [{
 
 app.set("view engine","ejs")
 app.use(express.urlencoded())
+app.use(express.static(path.join(__dirname,"public")))
 /* Use the express.urlencoded() middleware to parse URL-encoded data */
 
 app.get("/",(req,res)=>{
@@ -51,7 +53,7 @@ app.post("/updateData",(req,res)=>{
         else{
             item
         }
-    })
+    })  
     res.redirect("/")
 })
 

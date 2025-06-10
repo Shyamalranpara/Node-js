@@ -7,4 +7,4 @@ const db = mongoose.connection;
 db.once("open",(err)=>{
     err ? console.log(err) : console.log("db connected")
 })
-module.exports = db 
+module.exports = db;
